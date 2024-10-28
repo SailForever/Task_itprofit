@@ -1,0 +1,193 @@
+/*!******************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/frontend/styles/styles.scss ***!
+  \******************************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  background-color: transparent;
+  color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: #dcddff;
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  background-color: #efe9fd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1.8rem;
+}
+.feedback-container .feedback-text-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.feedback-container .feedback-text {
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-family: "Arial", sans-serif;
+  font-weight: 600;
+  padding: 1rem;
+  font-size: 24px;
+}
+.feedback-container .feedback-form {
+  width: 100%;
+}
+.feedback-container .fields-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+.feedback-container .label-and-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.feedback-container .input-item,
+.feedback-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.feedback-container .textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+.feedback-container .error {
+  border-color: red;
+}
+.feedback-container .error-message {
+  color: red;
+  font-size: 12px;
+}
+.feedback-container .button-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.feedback-container .response-msg {
+  margin: 4rem 0;
+  text-align: center;
+  font-size: 24px;
+}
+.feedback-container .error-msg {
+  margin-bottom: 4rem;
+  color: red;
+  text-align: center;
+}
+.feedback-container .error-msg__msg {
+  color: red;
+  margin: 0.5rem 0;
+}
+.feedback-container .send-button,
+.feedback-container .popup-open-button {
+  background: rgba(86, 46, 179, 0.5490196078);
+  border: 1px solid rgba(86, 46, 179, 0.5490196078);
+  color: #FFFFFF;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 14px;
+  transition: 0.3s ease-in-out;
+}
+.feedback-container .send-button:hover, .feedback-container .send-button:active,
+.feedback-container .popup-open-button:hover,
+.feedback-container .popup-open-button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: rgba(86, 46, 179, 0.5490196078);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #efe9fd;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  height: 50%;
+  animation: animation 0.3s ease-in forwards;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 1.8rem;
+}
+
+.popup-header {
+  padding-bottom: 1rem;
+}
+
+.popup-text {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.popup-open {
+  display: block;
+  overflow: hidden;
+}
+
+.popup-close {
+  display: none;
+  overflow: auto;
+}
+
+@keyframes animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 605px) {
+  .feedback-container {
+    padding: 0 0.75rem;
+  }
+}
