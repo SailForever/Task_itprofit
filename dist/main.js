@@ -57,7 +57,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var inpu
   \***************************************/
 /***/ (() => {
 
-eval("document.addEventListener('DOMContentLoaded', function () {\r\n    let popup = document.getElementById(\"popup\");\r\n    let btn = document.getElementById(\"popup-open-button\");\r\n\r\n    btn.addEventListener('click', () => {\r\n        popup.classList.add(\"popup-open\");\r\n        popup.classList.remove(\"popup-close\");\r\n    })\r\n\r\n    window.addEventListener('click', (event) => {\r\n        if (event.target === popup) {\r\n            popup.classList.add(\"popup-close\");\r\n            popup.classList.remove(\"popup-open\");\r\n        }\r\n    })\r\n})\n\n//# sourceURL=webpack://test-assignment/./src/frontend/modules/modal.js?");
+eval("document.addEventListener('DOMContentLoaded', function () {\r\n    let popup = document.getElementById(\"popup\");\r\n    let btn = document.getElementById(\"popup-open-button\");\r\n    let body = document.body;\r\n\r\n    btn.addEventListener('click', () => {\r\n        popup.classList.add(\"popup-open\");\r\n        popup.classList.remove(\"popup-close\");\r\n        body.classList.add(\"no-scroll\");\r\n    })\r\n\r\n    window.addEventListener('click', (event) => {\r\n        if (event.target === popup) {\r\n            popup.classList.add(\"popup-close\");\r\n            popup.classList.remove(\"popup-open\");\r\n            body.classList.remove(\"no-scroll\")\r\n        }\r\n    })\r\n})\n\n//# sourceURL=webpack://test-assignment/./src/frontend/modules/modal.js?");
 
 /***/ }),
 
