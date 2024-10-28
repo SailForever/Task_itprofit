@@ -26,18 +26,19 @@ document.getElementById("feedback-form").addEventListener("formValid", () => {
 
             if (result.status === "success") {
                 feedbackForm.reset();
-                feedbackForm.innerHTML = `
+                feedbackForm.insertAdjacentHTML("beforeend", `
                     <div class="response-msg">
                     <p class="response-msg__msg">${result.message}</p>
                     </div>
-                `;
+                `);
 
             } else if (result.status === "error") {
-                feedbackForm.innerHTML = `
+                feedbackForm.reset();
+                feedbackForm.insertAdjacentHTML("beforeend", `
                     <div class="response-msg">
                     <p class="response-msg__msg">${result.message}</p>
                     </div>
-                `;
+                `);
                 // Проверка, есть ли ошибки полей в ответе
                 if (!result.fields) {
                     // Добавляем симулированные ошибки полей, если их нет в ответе. Серверную часть нельзя изменять

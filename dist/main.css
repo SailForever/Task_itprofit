@@ -26,11 +26,14 @@ textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-.container {
+.main {
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  height: 100vh;
   background-color: #dcddff;
+}
+
+.container {
+  width: 100%;
 }
 
 .feedback-container {
@@ -38,8 +41,8 @@ textarea:-webkit-autofill {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 10rem auto;
   padding: 0 1.5rem;
   background-color: #efe9fd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -146,10 +149,9 @@ textarea:-webkit-autofill {
 
 .popup-content {
   background-color: #efe9fd;
-  margin: 15% auto;
+  margin: auto;
   padding: 20px;
   width: 50%;
-  height: 50%;
   animation: animation 0.3s ease-in forwards;
   font-size: 24px;
   text-align: center;
@@ -161,7 +163,7 @@ textarea:-webkit-autofill {
 }
 
 .popup-text {
-  height: 80%;
+  padding: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,7 +171,7 @@ textarea:-webkit-autofill {
 }
 
 .popup-open {
-  display: block;
+  display: flex;
   overflow: hidden;
 }
 

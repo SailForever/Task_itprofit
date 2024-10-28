@@ -2,6 +2,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('feedback-form');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
+
+        let responseMsg = document.querySelector(".response-msg");
+        let errorMsg = document.querySelector(".error-msg");
+        if (responseMsg){
+            responseMsg.remove();
+        }
+        if (errorMsg){
+            errorMsg.remove();
+        }
+
         if (validateForm()) {
             const event = new Event('formValid');
             form.dispatchEvent(event);

@@ -7,69 +7,72 @@
     <title>Feedback</title>
 </head>
 <body>
-    
-<main class="container">
-    <section class="feedback-container">
-        <div class="feedback-text-container">
-            <h2 class="feedback-text">Обратная связь</h2>
+    <main class="main">
+        <div class="container">
+            <section class="feedback">
+                <div class="feedback-container">
+                    <div class="feedback-text-container">
+                        <h2 class="feedback-text">Обратная связь</h2>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="popup-open-button" id="popup-open-button">Модальное окно</button>
+                    </div>
+                    <form class="feedback-form" id="feedback-form">
+                        <div class="fields-container">
+                            <div class="label-and-input">
+                                <label for="name">Имя</label>
+                                <input
+                                        class="input-item"
+                                        type="text"
+                                        placeholder="Введите имя"
+                                        name="name"
+                                        id="name"
+                                />
+                            </div>
+                            <div class="label-and-input">
+                                <label for="email">E-mail</label>
+                                <input
+                                        class="input-item"
+                                        type="email"
+                                        placeholder="Введите E-mail"
+                                        name="email"
+                                        id="email"
+                                />
+                            </div>
+                            <div class="label-and-input">
+                                <label for="tel">Телефон</label>
+                                <input
+                                        class="input-item"
+                                        type="text"
+                                        placeholder="Введите номер телефона"
+                                        name="tel"
+                                        id="tel"
+                                />
+                            </div>
+                            <div class="label-and-input">
+                                <label for="message">Сообщение</label>
+                                <textarea
+                                        class="textarea"
+                                        name="message"
+                                        placeholder="Введите ваше сообщение"
+                                        id="message"
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" class="send-button">Отправить</button>
+                        </div>
+                    </form>
+                    <div id="popup" class="popup">
+                        <div class="popup-content">
+                            <p class="popup-header">Тут должен быть заголовок</p>
+                            <p class="popup-text">Тут должен быть текст</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="button-container">
-            <button type="button" class="popup-open-button" id="popup-open-button">Модальное окно</button>
-        </div>
-        <form class="feedback-form" id="feedback-form">
-            <div class="fields-container">
-                <div class="label-and-input">
-                    <label for="name">Имя</label>
-                    <input
-                            class="input-item"
-                            type="text"
-                            placeholder="Введите имя"
-                            name="name"
-                            id="name"
-                    />
-                </div>
-                <div class="label-and-input">
-                    <label for="email">E-mail</label>
-                    <input
-                            class="input-item"
-                            type="email"
-                            placeholder="Введите E-mail"
-                            name="email"
-                            id="email"
-                    />
-                </div>
-                <div class="label-and-input">
-                    <label for="tel">Телефон</label>
-                    <input
-                            class="input-item"
-                            type="text"
-                            placeholder="Введите номер телефона"
-                            name="tel"
-                            id="tel"
-                    />
-                </div>
-                <div class="label-and-input">
-                    <label for="message">Сообщение</label>
-                    <textarea
-                            class="textarea"
-                            name="message"
-                            placeholder="Введите ваше сообщение"
-                            id="message"
-                    ></textarea>
-                </div>
-            </div>
-            <div class="button-container">
-                <button type="submit" class="send-button">Отправить</button>
-            </div>
-        </form>
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <p class="popup-header">Тут должен быть заголовок</p>
-                <p class="popup-text">Тут должен быть текст</p>
-            </div>
-        </div>
-    </section>
-</main>
+    </main>
 
 <script src="./dist/main.js"></script>
 
